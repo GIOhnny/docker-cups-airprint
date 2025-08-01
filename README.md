@@ -12,10 +12,10 @@ This Ubuntu-based Docker image runs a CUPS instance that is meant as an AirPrint
 
 ### Before run docker conteiner on DSM7 Synology run this commands in ssh terminal:
 * `sudo synosystemctl stop cupsd`
-* `sudo synosystemctl stop cups-lpd`
+* `sudo synosystemctl stop cups-lpd` or `cups-lpd.socket`
 * `sudo synosystemctl stop cups-service-handler`
 * `sudo synosystemctl disable cupsd`
-* `sudo synosystemctl disable cups-lpd`
+* `sudo synosystemctl disable cups-lpd` or `cups-lpd.socket`
 * `sudo synosystemctl disable cups-service-handler`
 
 ### Add and setup printer:
@@ -25,10 +25,10 @@ This Ubuntu-based Docker image runs a CUPS instance that is meant as an AirPrint
 
 ### After setup and testing AirPrint, you can back run on services. (maybe you will need restart nas)
 * `sudo synosystemctl start cupsd`
-* `sudo synosystemctl start cups-lpd`
+* `sudo synosystemctl start cups-lpd` or `cups-lpd.socket`
 * `sudo synosystemctl start cups-service-handler`
 * `sudo synosystemctl enable cupsd`
-* `sudo synosystemctl enable cups-lpd`
+* `sudo synosystemctl enable cups-lpd` or `cups-lpd.socket`
 * `sudo synosystemctl enable cups-service-handler`
 
 ## Manual Configuration
